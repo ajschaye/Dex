@@ -59,9 +59,10 @@
 - [ ] Promotion readiness checked
 - [ ] Skills gap analysis
 
-## System Discovery & Improvement (7 features)
+## System Discovery & Improvement (8 features)
 
 - [ ] Feature discovery (`/dex-level-up`)
+- [ ] X-ray transparency (`/xray`)
 - [ ] What's new check (`/dex-whats-new`)
 - [ ] Backlog review (`/dex-backlog`)
 - [ ] Improvement workshop (`/dex-improve`)
@@ -150,7 +151,7 @@ Tracks whether user has been asked about ScreenPipe ambient intelligence.
 Auto-calculated metrics (if analytics opted in). Updated when features are used.
 
 - **Days since setup:** 0
-- **Feature adoption score:** 0/57
+- **Feature adoption score:** 0/58
 - **Journey stage:** new
 - **Most active area:** (not yet determined)
 - **Last active date:** (not yet active)
@@ -160,6 +161,23 @@ Auto-calculated metrics (if analytics opted in). Updated when features are used.
 - `exploring` (days 8-30): Trying different features
 - `established` (days 31-90): Regular usage patterns
 - `power_user` (90+ days): Deep feature adoption
+
+---
+
+## AI Education Progress
+
+Track your understanding of the underlying system (via `/xray`):
+
+- [ ] Understands context windows (how AI "sees" information)
+- [ ] Understands tokens (the currency of context)
+- [ ] Understands system prompts (CLAUDE.md)
+- [ ] Understands tools/MCPs (how AI takes action)
+- [ ] Understands session hooks (the boot sequence)
+- [ ] Understands vault architecture (where everything lives)
+- [ ] Created first CLAUDE.md customization
+- [ ] Created first custom skill
+- [ ] Created first custom hook
+- [ ] Created first MCP server
 
 ---
 

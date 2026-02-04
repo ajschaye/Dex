@@ -8,6 +8,79 @@ All notable changes to Dex will be documented in this file.
 
 ## [Unreleased]
 
+### 🔬 X-Ray Vision: Learn AI by Seeing What Just Happened
+
+**What was frustrating:** Dex felt like a black box. You knew it was helping, but you had no idea what was actually happening — which tools were firing, how context was loaded, or how you could customize the system. Learning AI concepts felt abstract and disconnected from your actual experience.
+
+**What's new:** Run `/xray` anytime to understand what just happened in your conversation.
+
+**Default mode (just `/xray`):** Shows the work from THIS conversation:
+- What files were read and why
+- What tools/MCPs were used
+- What context was loaded at session start (and how)
+- How each action connects to underlying AI concepts
+
+**Deep-dive modes:**
+- `/xray ai` — First principles: context windows, tokens, statelessness, tools
+- `/xray dex` — The architecture: CLAUDE.md, hooks, MCPs, skills, vault structure
+- `/xray boot` — The session startup sequence in detail
+- `/xray today` — ScreenPipe-powered analysis of your day
+- `/xray extend` — How to customize: edit CLAUDE.md, create skills, write hooks, build MCPs
+
+**The philosophy:** The best way to learn AI is by examining what just happened, not reading abstract explanations. Every `/xray` session connects specific actions (I read this file because...) to general concepts (...CLAUDE.md tells me where files live).
+
+**Where you'll see it:**
+- Run `/xray` after any conversation to see "behind the scenes"
+- Educational concepts are tied to YOUR vault and YOUR actions
+- End with practical customization opportunities
+
+**The goal:** You're not just a user — you're empowered to extend and personalize your AI system because you understand the underlying mechanics.
+
+---
+
+### 🔌 Productivity Stack Integrations (Notion, Slack, Google Workspace)
+
+**What was frustrating:** Your work context is scattered across Notion, Slack, and Gmail. When prepping for meetings, you manually search each tool. When looking up a person, you don't see your communication history with them.
+
+**What's new:** Connect your productivity tools to Dex for richer context everywhere:
+
+1. **Notion Integration** (`/integrate-notion`)
+   - Search your Notion workspace from Dex
+   - Meeting prep pulls relevant Notion docs
+   - Person pages link to shared Notion content
+   - Uses official Notion MCP (`@notionhq/notion-mcp-server`)
+
+2. **Slack Integration** (`/integrate-slack`)
+   - "What did Sarah say about the Q1 budget?" → Searches Slack
+   - Meeting prep includes recent Slack context with attendees
+   - Person pages show communication history
+   - Easy cookie auth (no bot setup required) or traditional bot tokens
+
+3. **Google Workspace Integration** (`/integrate-google`)
+   - Gmail thread context in person pages
+   - Email threads with meeting attendees during prep
+   - Calendar event enrichment
+   - One-time OAuth setup (~5 min)
+
+**Where you'll see it:**
+- `/meeting-prep` — Pulls context from all enabled integrations
+- Person pages — Integration Context section with Slack/Notion/Email history
+- New users — Onboarding Step 9 offers integration setup
+- Existing users — `/dex-update` announces new integrations, detects your existing MCPs
+
+**Smart detection for existing users:**
+If you already have Notion/Slack/Google MCPs configured, Dex detects them and offers to:
+- Keep your existing setup (it works!)
+- Upgrade to Dex recommended packages (better maintained, more features)
+- Skip and configure later
+
+**Setup commands:**
+- `/integrate-notion` — 2 min setup (just needs a token)
+- `/integrate-slack` — 3 min setup (cookie auth or bot token)
+- `/integrate-google` — 5 min setup (OAuth through Google Cloud)
+
+---
+
 ### 🔔 Ambient Commitment Detection (ScreenPipe Integration) [BETA]
 
 **What was frustrating:** You say "I'll send that over" in Slack or get asked "Can you review this?" in email. These micro-commitments don't become tasks — they fall through the cracks until someone follows up (awkward) or they're forgotten (worse).
